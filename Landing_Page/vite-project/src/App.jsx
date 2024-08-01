@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Background from "./component/Background/Background";
+import Navbar from "./component/NavBar/Navbar";
 
 const App = () => {
   // created the variable for let hero data with 3 objects for we have display for the value
@@ -22,8 +23,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>hello world</h1>
       <Background playStatus={playStatus} heroCount={heroCount} />
+      <Navbar />
     </div>
   );
 };
