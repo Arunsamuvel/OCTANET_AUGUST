@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Background from "./component/Background/Background";
 import Navbar from "./component/NavBar/Navbar";
+import Hero from "./component/Hero/Hero";
 
 const App = () => {
   // created the variable for let hero data with 3 objects for we have display for the value
@@ -25,6 +26,14 @@ const App = () => {
     <div>
       <Background playStatus={playStatus} heroCount={heroCount} />
       <Navbar />
+      {/* here i'm passing the props  */}
+      <Hero
+        setPlayStatus={setPlayStatus}
+        setHeroCount={setHeroCount}
+        heroCount={heroCount}
+        playStatus={playStatus}
+        heroData={heroData[heroCount]}
+      />
     </div>
   );
 };
